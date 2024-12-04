@@ -1,0 +1,54 @@
+/* Общие стили */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, rgba(230, 246, 249, 0.8), rgba(226, 191, 244, 0.8));
+    color: #333;
+}
+
+header {
+    /* border-radius: 0 0 10px 10px; */
+    background-color: #343a40;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#dropdown-nav-link {
+    color: #333;
+}
+
+.scroll-to-top {
+    border-radius: 50px;
+    padding: 10px 15px;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+}
+
+.scroll-to-top:hover {
+    transform: scale(1.1);
+}
+
+/* Анимация заголовка */
+#animated-header {
+    transition: transform 0.3s ease-in-out;
+}
+
+#animated-header:hover {
+    transform: scale(1.05);
+}
+
+/* Анимация появления таблицы */
+#lectures-table {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#lectures-table.show {
+    opacity: 1;
+}
+
+/* Эффект на кнопке "Показать таблицу" */
+#show-lectures-btn:hover {
+    background-color: #0d6efd;
+    color: white;
+    transition: background-color 0.3s ease-in-out;
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Первый семестр - Илья Ловягин</title>
+    <link rel="icon" href="src/favicon.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/lesson3.css">
+
+    <style>
+        .student-photo {
+            width: 200px;
+            height: auto;
+            margin-top: 20px;
+            transition: transform 0.2s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Шапка -->
+    <header class="bg-dark text-white py-3 shadow-sm">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <img src="src/favicon.png" alt="Logo image" width="60" class="me-3 rounded">
+                <span class="fs-4 fw-bold">Логотип</span>
+            </div>
+            <div class="text-end">
+                <h6 class="mb-0 fw-semibold fs-6">Группа ЭФБО-05-23</h6>
+                <h6 class="mb-0 fs-6">Ловягин Илья Александрович</h6>
+            </div>
+        </div>
+    </header>
+
+    <!-- Меню навигации -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Сайт Ильи Ловягина</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./development.html">Разработка веб приложений</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Семестры
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="nav-link" id="dropdown-nav-link" href="./lesson3.html">Первый семестр</a></li>
+                            <li><a class="nav-link" id="dropdown-nav-link" href="#">Второй семестр</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Задания
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="nav-link" id="dropdown-nav-link" href="./task1.html">9. Основы JS</a></li>
+                            <li><a class="nav-link" id="dropdown-nav-link" href="./task2.html">10. Переменные в JS</a></li>
+                            <li><a class="nav-link" id="dropdown-nav-link" href="./task3.html">11. Работа с DOM</a></li>
+                            <li><a class="nav-link" id="dropdown-nav-link" href="./task4.html">12. Встраивание JS-скриптов</a></li>
+                            <li><a class="nav-link" id="dropdown-nav-link" href="./task5.html">13. Отладка в JS</a></li>
+                            <li><a class="nav-link" id="dropdown-nav-link" href="./task6.html">14. Создание анимаций</a></li>
+                            <li><a class="nav-link" id="dropdown-nav-link" href="./task7.html">15. Работа с Git</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <main class="container mt-5">
+        <div class="row">
+
+            <!-- Контент -->
+            <section class="col-md-9">
+                <h1 class="display-4 text-primary">13. Отладка JS-сценариев и
+                    создание обработчиков событий для элементов веб-документа</h1>
+
+                    <h1>Практики первого семестра</h1>
+                    <table id="practices-table" class="table table-striped table-hover table-bordered">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>#</th>
+                                <th>Тема</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td>Основы HTML</td></tr>
+                            <tr><td>2</td><td>Формы и кнопки</td></tr>
+                            <tr><td>3</td><td>HTML таблицы</td></tr>
+                            <tr><td>4</td><td>Основы CSS</td></tr>
+                            <tr><td>5</td><td>Работа с классами CSS</td></tr>
+                            <tr><td>6</td><td>Работа с Flex</td></tr>
+                            <tr><td>7</td><td>JS</td></tr>
+                            <tr><td>8</td><td>Git</td></tr>
+                        </tbody>
+                    </table>
+                    <button id="change-table">Посмотреть практики второго семестра</button>
+                
+                    <div>
+                        <img src="./src/cat.jpg" alt="Фотография студента" class="student-photo" id="student-photo">
+                    </div>
+                
+                    <script src="./scripts/script2.js"></script>
+            </section>
+        </div>
+    </main>
+
+    <!-- Кнопка наверх -->
+    <button id="scrollToTopButton" class="btn btn-secondary position-fixed bottom-0 end-0 m-3 scroll-to-top" onclick="scrollToTop()">Наверх</button>
+
+    <!-- Футер -->
+    <footer class="bg-dark text-white py-4 mt-5 shadow-sm">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>&copy; Ловягин Илья Александрович, 2024</div>
+            <div>
+                <a href="https://vk.com/loviagin.ilia" target="_blank" class="text-white me-2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/VK_Compact_Logo_%282021-present%29.svg/1024px-VK_Compact_Logo_%282021-present%29.svg.png" alt="VK" width="35">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Подключение Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Функция прокрутки наверх
+        function scrollToTop() {
+            try {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } catch (error) {
+                console.error("Ошибка в scrollToTop:", error);
+            }
+        }
+    </script>
+</body>
+
+</html>
